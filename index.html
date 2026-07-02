@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>PIDMM Facilities Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Campus Operations Platform</p>
+          <h1>Facilities Management Command Center</h1>
+          <p class="hero-text">
+            Coordinate work orders, safety compliance, assets, maintenance, projects,
+            and learner support from one connected dashboard.
+          </p>
+          <p class="device-note">This dashboard is optimized for laptops, tablets, and phones on your local network.</p>
+        </div>
+        <div class="hero-panel">
+          <div class="mini-stat">
+            <span>Live uptime</span>
+            <strong>98.7%</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Active tasks</span>
+            <strong id="heroTasks">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="stats-grid" id="statsGrid"></section>
+
+      <main class="content-grid">
+        <section class="card card-wide">
+          <div class="section-title-row">
+            <h2>Work Orders</h2>
+            <button class="ghost-btn">+ New Work Order</button>
+          </div>
+          <form id="workOrderForm" class="inline-form">
+            <input type="text" id="title" placeholder="Issue title" required />
+            <input type="text" id="location" placeholder="Location" required />
+            <select id="priority">
+              <option>Low</option>
+              <option selected>Medium</option>
+              <option>High</option>
+              <option>Critical</option>
+            </select>
+            <button type="submit">Dispatch</button>
+          </form>
+          <div id="workOrderList" class="stack-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-title-row">
+            <h2>Incident Reports</h2>
+            <span class="pill">Daily summary</span>
+          </div>
+          <div id="reportList" class="stack-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-title-row">
+            <h2>OSHA & Compliance</h2>
+            <span class="pill success">On track</span>
+          </div>
+          <ul class="check-list" id="oshaList"></ul>
+        </section>
+
+        <section class="card">
+          <div class="section-title-row">
+            <h2>Asset Management</h2>
+            <span class="pill">Inventory</span>
+          </div>
+          <div id="assetList" class="stack-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-title-row">
+            <h2>GPS Tracking</h2>
+            <span class="pill">Live routes</span>
+          </div>
+          <div id="gpsList" class="stack-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-title-row">
+            <h2>Maintenance Schedule</h2>
+            <span class="pill">Next 7 days</span>
+          </div>
+          <div id="scheduleList" class="stack-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-title-row">
+            <h2>Capital Projects</h2>
+            <span class="pill">Tracking</span>
+          </div>
+          <div id="projectList" class="stack-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-title-row">
+            <h2>Student Support</h2>
+            <span class="pill">Campus reach</span>
+          </div>
+          <div id="supportStats" class="support-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
